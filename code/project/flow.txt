@@ -1,0 +1,19 @@
+Sure, here's a brief explanation of the flow of the program:
+
+The program starts by including the necessary libraries: <stdio.h>, <stdlib.h>, and <string.h>.
+
+It then defines some constants that are used throughout the program, such as MAX_WORD_LEN, MAX_WORDS, and MAX_SENTENCE_LEN. These constants define the maximum length of a word, the maximum number of words that can be stored in the dictionary, and the maximum length of a sentence, respectively.
+
+It declares a 2D array called "dictionary" to store the words from the dictionary file, and an integer called "dictionary_count" to keep track of the number of words in the dictionary.
+
+The "load_dictionary" function is defined next. This function takes a file name as a parameter, opens the file, and reads in the words, one by one, into the "dictionary" array. The function keeps track of the number of words read in by incrementing the "dictionary_count" variable.
+
+The "edit_distance" function is defined next. This function takes two words as parameters and calculates the Levenshtein distance (minimum number of single-character edits) between them. It uses dynamic programming approach to achieve this.
+
+The "correction" function is defined next. This function takes a word as a parameter and compares it with each word in the dictionary using the "edit_distance" function. It keeps track of the dictionary word with the smallest edit distance to the misspelled word. If the minimum distance is 1, it returns this dictionary word as the corrected spelling, otherwise it returns the original misspelled word.
+
+The "correct_sentence" function is defined next. This function takes a sentence as a parameter, tokenizes it into individual words using the "strtok" function, and calls the "correction" function on each word. Then, it reassembles the corrected words into a single sentence, and prints the corrected sentence to the console.
+
+The "main" function is defined last. It calls the "load_dictionary" function to load the dictionary file, prompts the user to enter a sentence, calls the "correct_sentence" function, and returns 0 to indicate successful execution of the program.
+
+It's important to note that this program is a basic example, and a real-world spell checker would use more advanced algorithms and a much larger dictionary. Additionally, it's a good practice to pre-process the big.txt file before using it, cleaning and removing any unnecessary information.
