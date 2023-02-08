@@ -8,7 +8,6 @@ void main(){
     int L = (data>>8)&0x00FF;
     int R = data<<8&0xFF00;
     printf("%d",L|R);
-
 }
 
 /*          
