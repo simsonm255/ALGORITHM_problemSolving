@@ -9,4 +9,4 @@ var isPalindrome = function(x) {
     return x==check;
 };
 
-console.log(isPalindrome());
+console.log(isPalindrome(x));
