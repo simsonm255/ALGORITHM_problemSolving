@@ -20,7 +20,6 @@ int main()
         printf("\n");
         k++;// determine the space and element to be printed
         n--;//row iteration
-        
     }
     return 0;
 }

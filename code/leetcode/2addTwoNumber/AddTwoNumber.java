@@ -1,4 +1,4 @@
-package code.leetcode.2addTwoNumber;
+
 
 class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
@@ -13,7 +13,7 @@ class Solution {
             carry = sum>9?1:0;
             list.next = new ListNode(sum%10);
             list = list.next;
-            
+
             l1 = l1!=null?l1.next:null;
             l2 = l2!=null?l2.next:null;
         }
